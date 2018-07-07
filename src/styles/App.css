@@ -1,0 +1,117 @@
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #def0f0;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  height: 100%;
+}
+
+.AppContainer {
+  grid-column: 3/9;
+  height: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  display: grid;
+  grid-template-rows: 3em 9fr 3em;
+  grid-gap: 1em;
+}
+
+.AppHeader {
+  grid-row: 1;
+  align-self: end;
+
+  min-height: 3em;
+}
+
+.AppContent {
+  padding: 1em;
+}
+
+.AppFooter {
+  grid-row: 3;
+  align-self: start;
+}
+
+.Home-logo {
+  width: 40em;
+}
+
+.Home-intro {
+  max-width: 50em;
+  text-align: justify;
+}
+
+.HomeNav {
+  width: 60em;
+  margin-top: 5em;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.HomeCard {
+  flex: 1 0 calc(33.333% );
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.ServiceTableNavigator {
+  padding: 2em;
+}
+
+.ServiceTableNavigatorButton {
+  margin: 2em;
+  display: block;
+}
+
+.ServiceTableAssembly {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.ServiceTableAssembly-Navigator {
+  grid-column: 1;
+}
+
+.ServiceTableAssembly-Table {
+  grid-column: 2;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.glyphicon {
+  font-size: 2em;
+}
