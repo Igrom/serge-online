@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+x-cimpress-resource-access-level: public
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-cimpress-resource-access-level
+
+[
+  {
+    "id": "1",
+    "name": "name one",
+    "address": "address one",
+    "email": "email one",
+    "phone": "phone one",
+    "language": "language one",
+    "website": "website one"
+  }
+
+  {
+    "id": "2",
+    "name": "name two",
+    "address": "address two",
+    "email": "email two",
+    "phone": "phone two",
+    "language": "language two",
+    "website": "website two"
+  }
+
+  {
+    "id": "3",
+    "name": "name three",
+    "address": "address three",
+    "email": "email three",
+    "phone": "phone three",
+    "language": "language three",
+    "website": "website three"
+  }
+]

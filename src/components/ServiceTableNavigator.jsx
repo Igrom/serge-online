@@ -12,6 +12,10 @@ class ServiceTableNavigator extends React.Component {
       supportModify: typeof this.props.supportModify === "undefined" ? true : this.props.supportModify,
       supportDelete: typeof this.props.supportDelete === "undefined" ? true : this.props.supportDelete
     };
+
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleModify = this.handleModify.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleAdd(e) {
@@ -37,6 +41,7 @@ class ServiceTableNavigator extends React.Component {
 
     if (this.state.supportAdd) {
       buttons.push(<Button
+        onClick={this.handleAdd}
         className="ServiceTableNavigatorButton">
           Add new {this.props.noun.singular}
         </Button>);
@@ -44,6 +49,7 @@ class ServiceTableNavigator extends React.Component {
 
     if (this.state.supportModify) {
       buttons.push(<Button
+        onClick={this.handleModify}
         className="ServiceTableNavigatorButton">
           Modify selected {this.props.noun.singular}
         </Button>);
@@ -51,6 +57,7 @@ class ServiceTableNavigator extends React.Component {
 
     if (this.state.supportDelete) {
       buttons.push(<Button
+        onClick={this.handleDelete}
         className="ServiceTableNavigatorButton">
           Delete selected {this.props.noun.singular}
         </Button>);

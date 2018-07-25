@@ -10,6 +10,16 @@ const routes = {
   "/": "Main"
 };
 
+const services = {
+  customers: "Customer",
+  locations: "Location",
+  orders: "Order",
+  products: "Product",
+  shipments: "Shipment",
+  sources: "Source",
+  stock: "Stock"
+};
+
 const terms = {
   customers: {
     singular: "customer",

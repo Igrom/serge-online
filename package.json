@@ -10,16 +10,29 @@
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "change-case": "^3.0.2",
+    "jsonpath": "^1.0.0",
+    "lodash.clonedeep": "^4.5.0",
     "lodash.uniq": "^4.5.0",
+    "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
+    "react-datepicker": "^1.5.0",
     "react-dom": "^16.4.1",
+    "react-notification": "^6.8.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-table": "^6.8.6"
+    "react-table": "^6.8.6",
+    "serge-customers-client": "^1.0.0",
+    "serge-locations-client": "^1.0.0",
+    "serge-orders-client": "^1.0.0",
+    "serge-products-client": "^1.0.0",
+    "serge-shipments-client": "^1.0.0",
+    "serge-sources-client": "^1.0.0",
+    "serge-stock-client": "^1.0.0"
   },
   "devDependencies": {
     "@storybook/react": "^3.4.8",

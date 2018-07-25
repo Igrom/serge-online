@@ -1,32 +1,28 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import { Image } from 'react-bootstrap';
-import logo from '../images/logo.png'
+import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import '../styles/App.css';
+import ServiceTableAssembly from './ServiceTableAssembly';
 
-import AppHeader from './AppHeader';
-import AppFooter from './AppFooter';
-import HomeNav from './HomeNav';
-
-
-class Home extends React.Component {
+class ServiceView extends React.Component {
   render() {
     return (
-      <div className="Home">
+      <div className="ServiceView">
         <center>
-          <Image src={logo} className="Home-logo"/>
-          <article className="Home-intro">
-          <h2>Welcome to Serge!</h2>
-          <p>Serge to system zarządzania magazynem napisany na potrzeby niewielkiego wirtualnego centrum logistycznego wzorowanego na duńskim centrum logistycznym, w którym autor pracował przez kilka dni latem 2014 roku.</p>
-<p>Magazyn, o którym mowa, jest handlowym centrum konsolidacyjnym wybudowanym na potrzeby sieci największych hipermarketów i zajmuje się realizacją względnie stałych zamówień na potrzeby poszczególnych lokalnych punktów handlowych obsługiwanych przez ten magazyn.</p>
-          </article>
-
-          <HomeNav />
+          <ServiceTableAssembly
+            data={this.props.data}
+            noun={this.props.noun}
+            client={this.props.client}/>
         </center>
       </div>
     );
   }
 }
 
-export default Home;
+ServiceView.propTypes = {
+  data: PropTypes.object,
+  client: PropTypes.object,
+  noun: PropTypes.object
+};
+
+export default ServiceView;
