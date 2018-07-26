@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import '../styles/App.css';
 
@@ -7,6 +7,7 @@ import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import Home from './Home';
 import ServiceView from './ServiceView';
+import ManagerView from './ManagerView';
 
 import dataFunction from '../data';
 import appInformation from '../appInformation';
@@ -44,11 +45,13 @@ class App extends React.Component {
         products: [],
         shipments: [],
         sources: [],
-        stock: []
+        stock: [],
+        employees: []
       }
     };
 
     this.makeServiceView = this.makeServiceView.bind(this);
+    this.makeManagerView = this.makeManagerView.bind(this);
   }
 
   componentDidMount() {
@@ -74,15 +77,24 @@ class App extends React.Component {
     );
   }
 
+  makeManagerView(props) {
+    return (
+      <ManagerView
+        data={this.state.data}/>
+    );
+  }
+
   render() {
     return (
       <div className="App">
         <div className="AppContainer">
           <AppHeader/>
           <div className="AppContent card card-2">
-            <Route exact path="/" component={Home} />
-            <Route exact path="/manager" component={Home} />
-            <Route exact path="/:foo" component={this.makeServiceView}/>
+            <Switch>
+              <Route exact path="/manager" component={this.makeManagerView}/>
+              <Route exact path="/:foo" component={this.makeServiceView}/>
+              <Route exact path="/" component={Home}/>
+            </Switch>
           </div>
           <AppFooter/>
         </div>

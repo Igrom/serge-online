@@ -61,7 +61,7 @@ class ServiceTable extends React.Component {
             getTrProps={this.trSelector.bind(this)}
             data={this.props.data}
             columns={columns}
-            defaultPageSize={10}
+            defaultPageSize={30}
             className="-striped -highlight"/>
         </div>
     );

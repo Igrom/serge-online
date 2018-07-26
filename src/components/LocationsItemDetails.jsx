@@ -78,7 +78,7 @@ class LocationsItemDetails extends React.Component {
         }))}
         options={this.props.data.stock.map(v => ({
           value: v._links.self.href,
-          label: v.name
+          label: v._links.self.href
         }))}
         onChange={arr => this.handleChange('$.stock', {
           target: {

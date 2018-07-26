@@ -28,6 +28,7 @@
     "react-table": "^6.8.6",
     "serge-customers-client": "^1.0.0",
     "serge-locations-client": "^1.0.0",
+    "serge-manager-client": "^1.0.1",
     "serge-orders-client": "^1.0.0",
     "serge-products-client": "^1.0.0",
     "serge-shipments-client": "^1.0.0",

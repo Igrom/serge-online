@@ -99,6 +99,22 @@ body {
   grid-column: 2;
 }
 
+.ManagerView { }
+
+.ManagerView-EmployeeDetails {
+  float: left;
+  padding: 1em;
+  margin-right: 1em;
+}
+
+.ManagerView-LocationDetails {
+  background-color: #eeeeee !important;
+  min-width: 40em;
+  float: left;
+  padding: 1em;
+  margin: 5em;
+}
+
 .card {
   background: #fff;
   border-radius: 2px;
